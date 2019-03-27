@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
+  "name": "AvailableTable",
+  "version": "1.0.0",
+  "description": "Reviews module",
+  "author": "Jia Feng",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
