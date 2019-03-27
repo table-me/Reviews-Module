@@ -9,6 +9,7 @@
   },
   "scripts": {},
   "dependencies": {
+    "acorn": "^6.1.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
@@ -24,6 +25,7 @@
     "webpack": "^4.29.6"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "faker": "^4.1.0"
   }
 }
