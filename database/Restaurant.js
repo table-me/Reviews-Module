@@ -24,7 +24,6 @@ const restaurantSchema = new mongoose.Schema({
   }]
 });
 
-const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
 class User {
   constructor() {
@@ -68,6 +67,7 @@ const makeReview = () => {
 };
 
 const mockData = [];
+
 const createMockData = () => {
   for (let i = 0; i < 101; i++) {
     let restaurant = {
@@ -80,6 +80,7 @@ const createMockData = () => {
 };
 
 createMockData();
+const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
-module.exports.Restaurants = Restaurant;
+module.exports.Restaurant = Restaurant;
 module.exports.mockData = mockData;
