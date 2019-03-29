@@ -1,4 +1,12 @@
 const mongoose = require('mongoose');
-const db = mongoose.connect('mongodb://localhost/reviews', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/reviews', {useNewUrlParser: true});
+const Restaurant = require('./Restaurant.js').Restaurants;
+const restaurantData = require('./Restaurant.js').mockData;
+ 
 
-module.exports = db;
+const insertData = () => {
+  Restaurant.create(restaurantData)
+  .then(() => mongoose.disconnect())
+};
+
+insertData();

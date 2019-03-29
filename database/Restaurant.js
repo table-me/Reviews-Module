@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 
 
 const restaurantSchema = new mongoose.Schema({
-  _id: mongoose.Schema.Types.ObjectId,
+  name: String,
   users: [{
     username: String,
     profilePic: String,
@@ -35,7 +35,7 @@ class User {
 };
 
 const makeUser = () => {
-  let n = Math.floor(Math.random() * 50 + 1);
+  let n = Math.floor(Math.random() * 40 + 1);
   let results = [];
   for (let i = 0; i < n; i++) {
     let user = new User();
@@ -46,7 +46,6 @@ const makeUser = () => {
 
 class Review {
   constructor () {
-    // this.restaurantId = [{type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant'}],
     this.review = faker.lorem.sentences(),
     this.createdAt = faker.date.past(),
     this.ratings = {
@@ -70,8 +69,9 @@ const makeReview = () => {
 
 const mockData = [];
 const createMockData = () => {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 101; i++) {
     let restaurant = {
+      name: faker.company.companyName(),
       users: makeUser(),
       reviews: makeReview()
     };
@@ -80,7 +80,6 @@ const createMockData = () => {
 };
 
 createMockData();
-console.log(mockData)
 
 module.exports.Restaurants = Restaurant;
 module.exports.mockData = mockData;

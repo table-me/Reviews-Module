@@ -6,7 +6,8 @@
   "license": "",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "webpack -d --watch"
+    "build": "webpack -d --watch",
+    "seed": "node ./database/seed.js"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
