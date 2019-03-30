@@ -7,16 +7,19 @@
   "scripts": {
     "start": "nodemon server.js",
     "build": "webpack -d --watch",
-    "seed": "node ./database/seed.js"
+    "seed": "node ./database/seed.js",
+    "test": "jest"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "acorn": "^6.1.1",
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "body-parser": "^1.18.3",
     "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "express": "^4.16.4",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
