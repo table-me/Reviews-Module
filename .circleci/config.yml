@@ -1,0 +1,6 @@
+version: 2
+jobs: 
+  build:
+    working_directory: ~/reviews-module
+    steps: 
+      - checkout 
