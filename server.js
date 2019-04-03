@@ -13,11 +13,10 @@ app.get('/', (req, res) => {
   res.sendFile('index.html')
 });
 
-app.get('/reviews/232', (req, res) => {
-  Restaurant.find((err, reviews) => {
-    if (err) throw err;
-    console.log(reviews)
-    res.send(reviews);
+app.get('/api/reviews/:id', (req, res) => {
+  Restaurant.findById(req.params.id, (err, data) => {
+    if (err) throw (err);
+    res.json(data);
   });
 });
 
