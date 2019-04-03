@@ -1,4 +1,5 @@
 const faker = require('faker');
+const db = require('./index.js');
 
 class Review {
   constructor () {
@@ -49,7 +50,7 @@ const createMockData = () => {
   for (let i = 0; i < 101; i++) {
     let restaurant = {
       name: faker.company.companyName(),
-      reviews: makeUser()
+      users: makeUser()
     };
     mockData.push(restaurant);
   };
@@ -57,4 +58,4 @@ const createMockData = () => {
 
 createMockData();
 
-module.exports.mockData = mockData;
+module.exports = mockData;
