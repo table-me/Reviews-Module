@@ -111,7 +111,6 @@ node_modules/react-test-renderer/umd/react-test-renderer-shallow.production.min.
 node_modules/react-test-renderer/umd/react-test-renderer.development.js
 node_modules/react-test-renderer/umd/react-test-renderer.production.min.js
 node_modules/.bin/eslint
-node_modules/write/README.md
 node_modules/acorn-jsx/index.js
 node_modules/acorn-jsx/LICENSE
 node_modules/acorn-jsx/package.json
@@ -4503,4 +4502,5 @@ node_modules/tmp/README.md
 node_modules/write/index.js
 node_modules/write/LICENSE
 node_modules/write/package.json
+node_modules/write/README.md
 .DS_Store

@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public/dist'));
 
 app.get('/', (req, res) => {
-  res.sendFile('/index.html');
+  res.sendFile('index.html')
 });
 
 app.get('/api/reviews/:id', (req, res) => {
