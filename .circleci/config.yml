@@ -4,3 +4,7 @@ jobs:
     working_directory: ~/reviews-module
     steps: 
       - checkout 
+      - run:
+          name: test
+          command: npm test
+
