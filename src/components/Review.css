@@ -1,0 +1,207 @@
+.rightHalf, .leftHalf {
+    display: inline-block
+}
+#reviewLeftHalf {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 6rem;
+    position: relative;
+    flex: 0 0 auto;
+}
+#reviewRightHalf {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#reviewStarsDateRating {
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}
+#reviewCircleContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+#reviewStarsDate {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+#reviewStarsContainer {
+    width: calc(18px * 5 + 0.25rem * 5);
+    margin: 0 0.5rem 0 0;
+    flex-shrink: 0;
+    padding-bottom: 2px;
+}
+.reviewStar {
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    margin-right: 0.10rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.reviewRatingDate {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+#reviewRatingsContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+.reviewRatingCategory {
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.43;
+    text-transform: capitalize;
+    margin: 0 0.5rem 0 0;
+}
+.reviewRatingNumber {
+    color: #da3743;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.43;
+}
+.twoHalvesContainer {
+    display: flex;
+}
+.authorCircle {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-size: contain;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='48' height='48' viewBox='0 0…c-5.623 0-10.182 4.559-10.182 10.182z' fill='%23FFF'/%3E%3C/g%3E%3C/svg%3E) no-repeat 50%");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#usernameContainer {
+    text-align: center;
+    word-break: break-word;
+}
+#reviewUsername {
+    font-weight: 500;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+    color: #2d333f;
+}
+#userCity {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.43;
+    color: #6f737b;
+    margin-bottom: 0.5rem;
+}
+#userReviewsContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0.5rem 0 0;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.43;
+    flex: none;
+    white-space: nowrap;
+    color: #6f737b;
+}
+.commentIcon {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    flex: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Euniversal / icon / details / small / ic_ticket copy%3C/title%3E%3Cpath d='M4.5 3.5A1.5 1.5 0 0 0 3 5v4.099a1.5 1.5 0 0 0 1.5 1.5h3.073L9.8 12.091a.5.5 0 0 0 .779-.409l.013-1.083h.908a1.5 1.5 0 0 0 1.5-1.5V5a1.5 1.5 0 0 0-1.5-1.5h-7z' stroke='%236F737B' fill='none'/%3E%3C/svg%3E")
+}
+#reviewInitials {
+    color: #ffffff;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.imgCircle {
+    width: 45px;
+    height: 45px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: inline;
+    background-color: #da3743;
+}
+
+.helpHovered {
+    background-color: #da3743;
+    margin: 0 0 0 0;
+}
+#reviewContainer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #d8d9db;
+    color: #2d333f;
+}
+#readMore {
+    color: #da3743;
+    text-decoration: none;
+    font-size: inherit;
+    height: 24px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+#readMore:hover {
+    text-decoration: underline;
+}
+#flagIcon {
+    height: 1.5rem;
+    display: inline-block;
+    width: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' style='background:%23fff'%3E%3Ctitle%3Eicon/ic_report%3C/title%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0z'/%3E%3Cpath d='M6 2v19a1 1 0 0 1-2 0V4a2 2 0 0 1 2-2z' fill='%23333'/%3E%3Cpath d='M5 13h12.773L13.33 8l4.444-5H6a1 1 0 0 0-1 1v9z' stroke='%23333' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+.star {
+    width: 16px;
+    height: 16px;
+}
+#upvoteIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+    display: flex;
+}
+#reportHelpful {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#subReportHelpful {
+    display: flex;
+    position: relative;
+    align-self: flex-start;
+    cursor: pointer;
+}
+.reportText {
+    margin: 0 0 0 0.25rem;
+    font-weight: 500;
+    line-height: 1.43;
+    font-size: 0.875rem;
+}
+.flexCenter {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+.flex {
+    display: flex;
+}

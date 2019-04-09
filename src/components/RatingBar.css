@@ -1,0 +1,30 @@
+.toolbarNumber {
+    margin-right: 0.5rem;
+    width: 1rem;
+    text-align: center;
+}
+.toolbarAndNumber {
+    cursor: pointer;
+}
+.toolbarAndNumber:hover {
+    text-decoration: underline;
+}
+.toolbarAndNumber:hover > .toolbar-light-background, .toolbar-hover-light-background:hover {
+    border-color: transparent; 
+    box-shadow: 0 0 0 2px #da3743; 
+}
+.toolbar-light-background, .toolbar-hover-light-background:hover {
+    color: #000;
+    border: 1px solid #d8d9db;
+    display: inline-block;
+    width: 232px;
+    height: 13px;
+    margin-bottom: .75rem;
+    position: relative;
+    top: 14px;
+}
+.toolbar-red, .toolbar-hover-red:hover {
+    color: #fff;
+    background-color: #da3743;
+    height: 13px;
+}

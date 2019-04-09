@@ -1,0 +1,21 @@
+.filterCheckBox {
+    padding: .5rem .5rem;
+    border: 1px solid #d8d9db;
+    cursor: pointer;
+    align-items: center;
+    margin: .5rem;
+}
+span:focus {
+    outline: none;
+}
+.filterCheckBox:hover, .filterCheckBox:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px #da3743;
+}
+.filterBoxIcon {
+    position: relative;
+    top: 3px;
+    margin-right: .25rem;
+    width: 18px;
+    height: 18px;
+}
