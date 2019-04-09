@@ -1,29 +1,27 @@
 const mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
-const db = require('./index.js');
 const AutoIncrement = require('mongoose-sequence')(mongoose);
+const db = require('./index.js');
+mongoose.Promise = global.Promise;
 
 const restaurantSchema = new mongoose.Schema({
-  _id: Number,
   name: String,
-  users: [{
+  filters: [],
+  reviews: [{
     username: String,
     profilePic: String,
     city: String,
-    reviews: [{
-      review: String,
-      createdAt: Date,
-      ratings: [{
-        overall: Number,
-        food: Number,
-        ambiance: Number,
-        service: Number,
-        value: Number
-      }]
-    }]
-  }]
-}, { _id: false });
-restaurantSchema.plugin(AutoIncrement);
+    review: String,
+    createdAt: Date,
+    noise: Number,
+    foodRating: Number,
+    ambianceRating: Number,
+    serviceRating: Number,
+    valueRating: Number,
+    overallRating: Number,
+    reviewCount: Number
+  }],
+});
+restaurantSchema.plugin(AutoIncrement, { inc_field: 'id' });
 
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 

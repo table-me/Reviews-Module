@@ -1,0 +1,104 @@
+.summaryStarRating {
+    display: inline-block;
+    margin: 5px 5px 5px 0; 
+    text-align: center;
+}
+#summaryStarText {
+    position: relative;
+    bottom: 3px;
+}
+.summaryStarIcon {
+    width: 20px;
+    height: 20px;
+}
+.summaryRating {
+    display: inline-block;
+    flex-direction: column;
+    list-style: none;
+    padding: 0 0.5rem;
+    position: relative;
+    text-align: center;
+    border-left: solid 1px #d8d9db;
+}
+#summaryFirstRating {
+    border-left: none;
+}
+#summaryToolbarContainer {
+    display: inline-block;
+    margin-left: .5rem;
+    position: relative;
+    bottom: 62px;
+}
+#leftSummaryContainer {
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#reviewConditional {
+    width: 363px;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: normal;
+}
+.inlineBlock {
+    display: inline-block;
+}
+.summaryHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.33;
+    color: rgb(45, 51, 63);
+    border-bottom: 1px solid rgb(216, 217, 219);
+    padding-bottom: 1rem;
+    margin: 0 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.summarySubHeader {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    display: flex;
+}
+#reviewSummaryContainer {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: solid 1px #d8d9db;
+}
+.summaryIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: .25rem;
+    margin-right: .25rem;
+}
+#summaryBarIcon, #thumbsUpIcon {
+    position: relative;
+    top: 5px;
+}
+#summaryNoiseLevel {
+    position: relative;
+    top: 1px;
+}
+#percentageRecommended {
+    font-weight: bold;
+}
+#lovedForContainer {
+    margin-bottom: 2.5rem;
+}
+#lovedForText {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.summarySpacingContainer {
+    padding-top: 1rem;
+}
+#bestRestaurantsLink {
+    color: #da3743;
+    text-decoration: none;
+}
+#bestRestaurantsLink:hover {
+    text-decoration: underline;
+}

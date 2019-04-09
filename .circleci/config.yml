@@ -1,0 +1,10 @@
+version: 2
+jobs: 
+  build:
+    working_directory: ~/reviews-module
+    steps: 
+      - checkout 
+      - run:
+          name: test
+          command: npm test
+
