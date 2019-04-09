@@ -143,7 +143,7 @@ class App extends React.Component {
     } else {
       let filtered = [];
       for (let i = 0; i < filterWordsSelected.length; i++) {
-        filtered = currentRestReviews.filter(review => review.reviewText.includes(filterWordsSelected[i]));
+        filtered = currentRestReviews.filter(review => review.review.includes(filterWordsSelected[i]));
         currentRestReviews = filtered;
       }
       this.setState({ reviews: filtered.slice(0, 20), currentRestReviews: filtered });

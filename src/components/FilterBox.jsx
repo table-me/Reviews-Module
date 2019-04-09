@@ -25,13 +25,16 @@ class FilterBox extends React.Component {
 
   render() {
     const { icon } = this.state;
-    const { keyWord: { filterKeyword }, filterReviews } = this.props;
+    const { keyWord, filterReviews } = this.props;
+    if (!keyWord) {
+      return <div>Loading...</div>
+    }
     return (
-      <span className="filterCheckBox" tabIndex="0" onClick={() => {this.switchIcon(); filterReviews(filterKeyword);}}>
+      <span className="filterCheckBox" tabIndex="0" onClick={() => {this.switchIcon(); filterReviews(keyWord);}}>
         <span>
           <img className="filterBoxIcon" src={icon} alt="Box Icon" />
         </span>
-        <span> {console.log(filterKeyword)}</span>
+        <span> {keyWord}</span>
       </span>
     );
   }

@@ -36,19 +36,19 @@ const ReviewSummary = ({ ratings, allReviews, stars, filter, scrollToTopOfFeed, 
             <div>
               <div className="summaryRating" id="summaryFirstRating">
                 <div><strong>{ratings.foodAverage}</strong></div>
-                <div>Food</div>
+                <div className="summaryCategory">Food</div>
               </div>
               <div className="summaryRating">
                 <div><strong>{ratings.serviceAverage}</strong></div>
-                <div>Service</div>
+                <div className="summaryCategory">Service</div>
               </div>
               <div className="summaryRating">
                 <div><strong>{ratings.ambianceAverage}</strong></div>
-                <div>Ambiance</div>
+                <div className="summaryCategory">Ambiance</div>
               </div>
               <div className="summaryRating">
                 <div><strong>{ratings.valueAverage}</strong></div>
-                <div>Value</div>
+                <div className="summaryCategory">Value</div>
               </div>
             </div>
             <div className="summarySpacingContainer">

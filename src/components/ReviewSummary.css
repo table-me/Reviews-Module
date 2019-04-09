@@ -44,8 +44,8 @@
     display: inline-block;
 }
 .summaryHeader {
+    font-family: 'BrandonText-Bold';
     font-size: 1.5rem;
-    font-weight: bold;
     line-height: 1.33;
     color: rgb(45, 51, 63);
     border-bottom: 1px solid rgb(216, 217, 219);
@@ -82,16 +82,7 @@
 #percentageRecommended {
     font-weight: bold;
 }
-#lovedForContainer {
-    margin-bottom: 2.5rem;
-}
-#lovedForText {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: bold;
-    display: flex;
-    margin-bottom: 2rem;
-}
+
 .summarySpacingContainer {
     padding-top: 1rem;
 }
