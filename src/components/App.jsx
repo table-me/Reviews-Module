@@ -118,8 +118,8 @@ class App extends React.Component {
 
   pullKeyWordsById(id) {
     axios.get(`/api/restaurant/${id}/filters`)
-      .then((res) => {
-        this.setState({ keyWords: res.data });
+      .then(res => {
+        this.setState({ keyWords: res.data.filters });
       })
       .catch(err => console.log(err));
   }

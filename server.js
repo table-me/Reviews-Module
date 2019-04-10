@@ -28,7 +28,7 @@ app.get('/api/restaurant/:id/reviews', (req, res) => {
 app.get('/api/restaurant/:id/filters', (req, res) => {
   Restaurant.find({id: JSON.parse(req.params.id)}, (err, result) => {
     if (err) res.status(400).send('error getting filtered keywords');
-    res.json(result[0].filters);
+    res.json(result[0]);
   })
 });
 
