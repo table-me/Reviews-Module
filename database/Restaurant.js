@@ -8,6 +8,7 @@ const restaurantSchema = new mongoose.Schema({
   filters: [],
   reviews: [{
     username: String,
+    initials: String,
     profilePic: String,
     city: String,
     review: String,
@@ -18,7 +19,8 @@ const restaurantSchema = new mongoose.Schema({
     serviceRating: Number,
     valueRating: Number,
     overallRating: Number,
-    reviewCount: Number
+    reviewCount: Number,
+    recommended: Number
   }],
 });
 restaurantSchema.plugin(AutoIncrement, { inc_field: 'id' });

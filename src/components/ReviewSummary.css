@@ -86,10 +86,10 @@
 .summarySpacingContainer {
     padding-top: 1rem;
 }
-#bestRestaurantsLink {
+#BestRestaurantsLink {
     color: #da3743;
     text-decoration: none;
 }
-#bestRestaurantsLink:hover {
+#BestRestaurantsLink:hover {
     text-decoration: underline;
 }

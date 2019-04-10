@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RatingBar from './RatingBar.jsx';
 import styles from './ReviewSummary.css';
 
-const ReviewSummary = ({ ratings, allReviews, stars, filter, scrollToTopOfFeed, percentages }) => {
+const ReviewSummary = ({ ratings, recommended, allReviews, stars, filter, scrollToTopOfFeed, percentages }) => {
     let noiseLevel;
     if (ratings.noise > 2) {
       noiseLevel = 'Loud';
@@ -60,7 +60,7 @@ const ReviewSummary = ({ ratings, allReviews, stars, filter, scrollToTopOfFeed, 
             <div className="summarySpacingContainer">
               <div className="inlineBlock">
                 <span><img className="summaryIcon" id="thumbsUpIcon" src="https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/thumbsUp.png" alt="thumbsUp icon" /></span>
-                <span id="recommendedText"><strong>{Math.floor(Math.random() * 50 + 50)}% of people</strong> <span>would recommend it to a friend</span></span>
+                <span id="recommendedText"><strong>{recommended}% of people</strong> <span>would recommend it to a friend</span></span>
               </div>
             </div>
           </div>

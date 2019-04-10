@@ -112,7 +112,9 @@ class Review extends React.Component {
 
           <div className="leftHalf" id="reviewLeftHalf">
             <div id="reviewCircleContainer">
-              <div className="authorCircle" style={{ backgroundColor: randomColor }}></div>
+              <div className="authorCircle" style={{ backgroundColor: randomColor }}>
+                <div id="reviewInitials">{review.initials}</div>
+              </div>
             </div>
             <div id="usernameContainer">
               <span>
