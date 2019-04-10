@@ -69,11 +69,9 @@ class App extends React.Component {
     axios.get(`/restaurant/101/reviews`)
       .then(res => {
         const rating = [];
-        // const percentRecommended = [];
         for (let i = 0; i < res.data.length; i++) {
           rating.push(res.data[i].overallRating);
         }
-        // percentRecommended.push(res.data[0].recommended);
 
         this.setState({
           allReviews: res.data,
