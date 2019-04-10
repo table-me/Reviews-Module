@@ -8,16 +8,12 @@ const port = 3004;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-// app.use('/restaurant/:id', express.static('/public/dist'));
-app.use(express.static(__dirname + '/public/dist'));
+app.use('/', express.static(__dirname + '/public/dist'));
+app.use('/restaurant/:id', express.static(__dirname + '/public/dist'));
 
-app.get('/', (req, res) => {
-  res.sendFile('index.html')
-});
-
-app.get('/restaurant/:id/reviews', (req, res) => {
+app.get('/api/restaurant/:id/reviews', (req, res) => {
   Restaurant.aggregate([
-    {$match: {'id': 794}},
+    {$match: {id: JSON.parse(req.params.id)}},
     {$unwind: '$reviews'},
     {$sort: {'reviews.createdAt': -1}}
   ], 
@@ -29,8 +25,8 @@ app.get('/restaurant/:id/reviews', (req, res) => {
   })
 });
 
-app.get('/restaurant/:id/filters', (req, res) => {
-  Restaurant.find({'id': 794}, (err, result) => {
+app.get('/api/restaurant/:id/filters', (req, res) => {
+  Restaurant.find({id: JSON.parse(req.params.id)}, (err, result) => {
     if (err) res.status(400).send('error getting filtered keywords');
     res.json(result[0].filters);
   })

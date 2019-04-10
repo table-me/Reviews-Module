@@ -6,7 +6,7 @@ import ReviewToolbar from './ReviewToolbar.jsx';
 import Pagination from './Pagination.jsx';
 import styles from './App.css';
 
-// const getIDFromURL = () => window.location.pathname.split('/')[2]
+const getIDFromURL = () => window.location.pathname.split('/')[2]
 
 const getAverage = (reviews, criteria) => {
   let sum = 0;
@@ -43,9 +43,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // const id = getIDFromURL();
-    this.pullReviewsById();
-    this.pullKeyWordsById();
+    const id = getIDFromURL();
+    this.pullReviewsById(id);
+    this.pullKeyWordsById(id);
   } 
 
   setDynamicStarRating() {
@@ -66,20 +66,19 @@ class App extends React.Component {
   }  
 
   pullReviewsById(id) {
-    axios.get(`/restaurant/101/reviews`)
+    axios.get(`/api/restaurant/${id}/reviews`)
       .then(res => {
         const rating = [];
         for (let i = 0; i < res.data.length; i++) {
           rating.push(res.data[i].overallRating);
         }
-
         this.setState({
           allReviews: res.data,
           reviews: res.data.slice(0, 20),
           totalPages: Math.round(res.data.length / 20),
           currentRestReviews: res.data,
           allRatings: rating,
-          recommended: res.data[0].recommended,
+          recommended: res.data[5].recommended,
           ratings: {
             totalAverage: getAverage(res.data, 'overallRating'),
             foodAverage: getAverage(res.data, 'foodRating'),
@@ -118,7 +117,7 @@ class App extends React.Component {
   }
 
   pullKeyWordsById(id) {
-    axios.get(`/restaurant/101/filters`)
+    axios.get(`/api/restaurant/${id}/filters`)
       .then((res) => {
         this.setState({ keyWords: res.data });
       })
