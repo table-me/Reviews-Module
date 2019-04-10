@@ -24,6 +24,7 @@ class App extends React.Component {
       allReviews: [],
       keyWords: [],
       allRatings: [],
+      recommended: 0,
       ratings: {
         totalAverage: 0,
         foodAverage: 0,
@@ -68,9 +69,11 @@ class App extends React.Component {
     axios.get(`/restaurant/101/reviews`)
       .then(res => {
         const rating = [];
+        // const percentRecommended = [];
         for (let i = 0; i < res.data.length; i++) {
-          rating.push(res.data[i].overallRating)
+          rating.push(res.data[i].overallRating);
         }
+        // percentRecommended.push(res.data[0].recommended);
 
         this.setState({
           allReviews: res.data,
@@ -78,6 +81,7 @@ class App extends React.Component {
           totalPages: Math.round(res.data.length / 20),
           currentRestReviews: res.data,
           allRatings: rating,
+          recommended: res.data[0].recommended,
           ratings: {
             totalAverage: getAverage(res.data, 'overallRating'),
             foodAverage: getAverage(res.data, 'foodRating'),
@@ -87,7 +91,6 @@ class App extends React.Component {
             noise: getAverage(res.data, 'noise')
           }
         }, () => {
-          // this.setCurrentReviews();
           this.setDynamicStarRating();
           this.getRatingPercentages();
         });
@@ -135,7 +138,7 @@ class App extends React.Component {
     }
 
     if (!filterWordsSelected.length) {
-      this.setState({ 
+      this.setState({
         reviews: allReviews.slice(0, 20),
         currentRestReviews: allReviews,
         totalPages: Math.round(currentRestReviews.length / 20), currentPage: 1 
@@ -143,7 +146,7 @@ class App extends React.Component {
     } else {
       let filtered = [];
       for (let i = 0; i < filterWordsSelected.length; i++) {
-        filtered = currentRestReviews.filter(review => review.reviewText.includes(filterWordsSelected[i]));
+        filtered = currentRestReviews.filter(review => review.review.includes(filterWordsSelected[i]));
         currentRestReviews = filtered;
       }
       this.setState({ reviews: filtered.slice(0, 20), currentRestReviews: filtered });
@@ -152,12 +155,11 @@ class App extends React.Component {
   }
 
   filterReviewsByRating(target) {
-    console.log('checked')
     const { allReviews } = this.state;
     const filtered = allReviews.filter(review => review.overallRating === target);
     this.setState({
-      reviews: filtered.slice(0, 20), 
-      currentRestReviews: filtered, 
+      reviews: filtered.slice(0, 20),
+      currentRestReviews: filtered,
       totalPages: Math.round(filtered.length / 20),
       currentPage: 1
     });
@@ -191,7 +193,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { reviews, allReviews, ratings, stars, keyWords, currentPage, totalPages, percentages } = this.state;
+    const { reviews, allReviews, recommended, ratings, stars, keyWords, currentPage, totalPages, percentages } = this.state;
 
     if (!reviews.length) {
       return <h3>Loading...</h3>
@@ -206,6 +208,7 @@ class App extends React.Component {
           filter={this.filterReviewsByRating.bind(this)}
           scrollToTopOfFeed={this.scrollToTopOfFeed.bind(this)}
           percentages={percentages}
+          recommended={recommended}
         /> }
 
         { <ReviewToolbar

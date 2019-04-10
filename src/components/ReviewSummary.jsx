@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import RatingBar from './RatingBar.jsx';
 import styles from './ReviewSummary.css';
 
-const ReviewSummary = ({ ratings, allReviews, stars, filter, scrollToTopOfFeed, percentages }) => {
+const ReviewSummary = ({ ratings, recommended, allReviews, stars, filter, scrollToTopOfFeed, percentages }) => {
     let noiseLevel;
     if (ratings.noise > 2) {
       noiseLevel = 'Loud';
@@ -36,19 +36,19 @@ const ReviewSummary = ({ ratings, allReviews, stars, filter, scrollToTopOfFeed, 
             <div>
               <div className="summaryRating" id="summaryFirstRating">
                 <div><strong>{ratings.foodAverage}</strong></div>
-                <div>Food</div>
+                <div className="summaryCategory">Food</div>
               </div>
               <div className="summaryRating">
                 <div><strong>{ratings.serviceAverage}</strong></div>
-                <div>Service</div>
+                <div className="summaryCategory">Service</div>
               </div>
               <div className="summaryRating">
                 <div><strong>{ratings.ambianceAverage}</strong></div>
-                <div>Ambiance</div>
+                <div className="summaryCategory">Ambiance</div>
               </div>
               <div className="summaryRating">
                 <div><strong>{ratings.valueAverage}</strong></div>
-                <div>Value</div>
+                <div className="summaryCategory">Value</div>
               </div>
             </div>
             <div className="summarySpacingContainer">
@@ -60,7 +60,7 @@ const ReviewSummary = ({ ratings, allReviews, stars, filter, scrollToTopOfFeed, 
             <div className="summarySpacingContainer">
               <div className="inlineBlock">
                 <span><img className="summaryIcon" id="thumbsUpIcon" src="https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/thumbsUp.png" alt="thumbsUp icon" /></span>
-                <span id="recommendedText"><strong>{Math.floor(Math.random() * 50 + 50)}% of people</strong> <span>would recommend it to a friend</span></span>
+                <span id="recommendedText"><strong>{recommended}% of people</strong> <span>would recommend it to a friend</span></span>
               </div>
             </div>
           </div>

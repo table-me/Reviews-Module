@@ -4,7 +4,7 @@ const Restaurant = require('./database/Restaurant.js');
 const path = require('path')
 
 const app = express();
-const port = 3000;
+const port = 3004;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 app.get('/restaurant/:id/reviews', (req, res) => {
   Restaurant.aggregate([
-    {$match: {'id': 429}},
+    {$match: {'id': 794}},
     {$unwind: '$reviews'},
     {$sort: {'reviews.createdAt': -1}}
   ], 
@@ -30,7 +30,7 @@ app.get('/restaurant/:id/reviews', (req, res) => {
 });
 
 app.get('/restaurant/:id/filters', (req, res) => {
-  Restaurant.find({'id': 429}, (err, result) => {
+  Restaurant.find({'id': 794}, (err, result) => {
     if (err) res.status(400).send('error getting filtered keywords');
     res.json(result[0].filters);
   })
