@@ -89,13 +89,11 @@ const ReviewSummary = ({ ratings, recommended, allReviews, stars, filter, scroll
 
 export default ReviewSummary;
 
-// ReviewSummary.propTypes = {
-//   lovedFor: PropTypes.array.isRequired,
-//   filter: PropTypes.func.isRequired,
-//   scrollToTopOfFeed: PropTypes.func.isRequired,
-//   allReviews: PropTypes.array.isRequired,
-//   restaurantInfo: PropTypes.array.isRequired,
-//   stars: PropTypes.array.isRequired,
-//   ratings: PropTypes.object.isRequired,
-//   percentages: PropTypes.array.isRequired
-// };
+ReviewSummary.propTypes = {
+  filter: PropTypes.func.isRequired,
+  scrollToTopOfFeed: PropTypes.func.isRequired,
+  allReviews: PropTypes.array.isRequired,
+  stars: PropTypes.array.isRequired,
+  ratings: PropTypes.object.isRequired,
+  percentages: PropTypes.array.isRequired
+};

@@ -51,8 +51,8 @@ class ReportPopUp extends React.Component {
 }
 export default ReportPopUp;
 
-// ReportPopUp.propTypes = {
-//   setNode: PropTypes.func.isRequired,
-//   toggleReportModal: PropTypes.func.isRequired,
-//   outsideClick: PropTypes.func.isRequired,
-// };
+ReportPopUp.propTypes = {
+  setNode: PropTypes.func.isRequired,
+  toggleReportModal: PropTypes.func.isRequired,
+  outsideClick: PropTypes.func.isRequired,
+};

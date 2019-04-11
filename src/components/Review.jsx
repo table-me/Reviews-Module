@@ -60,8 +60,6 @@ class Review extends React.Component {
       ? this.setState({ upvoteIcon: 'https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/redUpvote.png' }) 
       : this.setState({ upvoteIcon: 'https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/whiteUpvote.png' });
     review.is_helpful ? review.is_helpful = 0 : review.is_helpful = 1;
-    axios.post(`http://ec2-34-207-216-56.compute-1.amazonaws.com/restaurant/${review.is_helpful}/id/${review._id}/helpfulEvent`)
-      .catch(err => console.error(err));
   }
 
   readMoreToggle(e) {
@@ -186,19 +184,17 @@ class Review extends React.Component {
 }
 export default Review;
 
-// Review.propTypes = {
-//   review: PropTypes.shape({
-//     is_helpful: PropTypes.number.isRequired,
-//     ambianceRating: PropTypes.number.isRequired,
-//     serviceRating: PropTypes.number.isRequired,
-//     foodRating: PropTypes.number.isRequired,
-//     overallRating: PropTypes.number.isRequired,
-//     dinedDate: PropTypes.string.isRequired,
-//     is_recommended: PropTypes.number.isRequired,
-//     _id: PropTypes.number.isRequired,
-//     noise: PropTypes.number.isRequired,
-//     reviewText: PropTypes.string.isRequired,
-//     userName: PropTypes.string.isRequired,
-//     userReviewCount: PropTypes.number.isRequired,
-//   }).isRequired,
-// };
+Review.propTypes = {
+  review: PropTypes.shape({
+    ambianceRating: PropTypes.number.isRequired,
+    serviceRating: PropTypes.number.isRequired,
+    foodRating: PropTypes.number.isRequired,
+    overallRating: PropTypes.number.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    recommended: PropTypes.number.isRequired,
+    noise: PropTypes.number.isRequired,
+    review: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    reviewCount: PropTypes.number.isRequired,
+  }).isRequired,
+};

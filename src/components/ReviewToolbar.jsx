@@ -66,9 +66,9 @@ class ReviewToolbar extends React.Component {
 }
 export default ReviewToolbar;
 
-// ReviewToolbar.propTypes = {
-//   keyWords: PropTypes.array.isRequired,
-//   sortReviews: PropTypes.func.isRequired,
-//   filterReviews: PropTypes.func.isRequired,
-//   scrollToTopOfFeed: PropTypes.func.isRequired,
-// };
+ReviewToolbar.propTypes = {
+  keyWords: PropTypes.array.isRequired,
+  sortReviews: PropTypes.func.isRequired,
+  filterReviews: PropTypes.func.isRequired,
+  scrollToTopOfFeed: PropTypes.func.isRequired,
+};

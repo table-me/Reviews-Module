@@ -66,7 +66,7 @@ class App extends React.Component {
   }  
 
   pullReviewsById(id) {
-    axios.get(`/api/restaurant/${id}/reviews`)
+    axios.get(`/api/restaurants/${id}/reviews`)
       .then(res => {
         const rating = [];
         for (let i = 0; i < res.data.length; i++) {
@@ -117,7 +117,7 @@ class App extends React.Component {
   }
 
   pullKeyWordsById(id) {
-    axios.get(`/api/restaurant/${id}/filters`)
+    axios.get(`/api/restaurants/${id}/filters`)
       .then(res => {
         this.setState({ keyWords: res.data.filters });
       })
@@ -198,7 +198,7 @@ class App extends React.Component {
 
     return (
       <div id="appMasterContainer">
-        { <ReviewSummary
+        <ReviewSummary
           allReviews={allReviews}
           ratings={ratings}
           stars={stars}
@@ -206,19 +206,16 @@ class App extends React.Component {
           scrollToTopOfFeed={this.scrollToTopOfFeed.bind(this)}
           percentages={percentages}
           recommended={recommended}
-        /> }
+        />
 
-        { <ReviewToolbar
+        <ReviewToolbar
           keyWords={keyWords}
           sortReviews={this.sortReviewsBySelect.bind(this)}
           filterReviews={this.filterReviewsByKeyWord.bind(this)}
           scrollToTopOfFeed={this.scrollToTopOfFeed.bind(this)}
-        /> }
+        />
 
-        { <ReviewList
-          reviews={reviews}
-          key={reviews._id}
-        /> }
+        <ReviewList reviews={reviews} />
 
         <Pagination
           reviews={allReviews}

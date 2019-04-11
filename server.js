@@ -9,9 +9,9 @@ const port = 3004;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', express.static(__dirname + '/public/dist'));
-app.use('/restaurant/:id', express.static(__dirname + '/public/dist'));
+app.use('/restaurants/:id', express.static(__dirname + '/public/dist'));
 
-app.get('/api/restaurant/:id/reviews', (req, res) => {
+app.get('/api/restaurants/:id/reviews', (req, res) => {
   Restaurant.aggregate([
     {$match: {id: JSON.parse(req.params.id)}},
     {$unwind: '$reviews'},
@@ -25,7 +25,7 @@ app.get('/api/restaurant/:id/reviews', (req, res) => {
   })
 });
 
-app.get('/api/restaurant/:id/filters', (req, res) => {
+app.get('/api/restaurants/:id/filters', (req, res) => {
   Restaurant.find({id: JSON.parse(req.params.id)}, (err, result) => {
     if (err) res.status(400).send('error getting filtered keywords');
     res.json(result[0]);

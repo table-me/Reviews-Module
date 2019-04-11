@@ -71,9 +71,9 @@ const Pagination = ({ currentPage, totalPages, scrollToTopOfFeed, handlePageChan
 };
 export default Pagination;
 
-// Pagination.propTypes = {
-//   currentPage: PropTypes.number.isRequired,
-//   totalPages: PropTypes.number.isRequired,
-//   scrollToTopOfFeed: PropTypes.func.isRequired,
-//   handlePageChange: PropTypes.func.isRequired,
-// };
+Pagination.propTypes = {
+  currentPage: PropTypes.number.isRequired,
+  totalPages: PropTypes.number.isRequired,
+  scrollToTopOfFeed: PropTypes.func.isRequired,
+  handlePageChange: PropTypes.func.isRequired,
+};

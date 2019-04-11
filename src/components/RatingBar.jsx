@@ -8,7 +8,7 @@ const RatingBar = ({ index, filter, scrollToTopOfFeed, percentages }) => {
   }
   return (
       <div className="toolbarAndNumber" onClick={() => {filter(5 - index); scrollToTopOfFeed();}}>
-      <span className="toolbarNumber">{console.log('index', index)}</span>
+      <span className="toolbarNumber">{5 - index}</span>
       <div className="toolbar-light-background">
         <div className="toolbar-red" style={{ width: percentages[4 - index] }} key={percentages[4 - index]} />
       </div>
@@ -18,9 +18,9 @@ const RatingBar = ({ index, filter, scrollToTopOfFeed, percentages }) => {
 
 export default RatingBar;
 
-// RatingBar.propTypes = {
-//     filter: PropTypes.func.isRequired,
-//     scrollToTopOfFeed: PropTypes.func.isRequired,
-//     percentages: PropTypes.array.isRequired,
-//     i: PropTypes.number.isRequired,
-// };
+RatingBar.propTypes = {
+    filter: PropTypes.func.isRequired,
+    scrollToTopOfFeed: PropTypes.func.isRequired,
+    percentages: PropTypes.array.isRequired,
+    index: PropTypes.number.isRequired,
+};

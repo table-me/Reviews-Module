@@ -41,9 +41,7 @@ class FilterBox extends React.Component {
 }
 export default FilterBox;
 
-// FilterBox.propTypes = {
-//   keyWord: PropTypes.shape({
-//     filterKeyword: PropTypes.string.isRequired,
-//   }).isRequired,
-//   filterReviews: PropTypes.func.isRequired,
-// };
+FilterBox.propTypes = {
+  keyWord: PropTypes.string.isRequired,
+  filterReviews: PropTypes.func.isRequired,
+};
