@@ -15,7 +15,7 @@ class Review extends React.Component {
         ? "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/redUpvote.png"
         : "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/whiteUpvote.png",
       readMoreClicked: false,
-      reviewText: this.props.review.review.slice(0, 200),
+      reviewText: this.props.review.review.slice(0, 150),
       stars: [],
       reportClicked: false,
       reportPopUp: "",
@@ -28,8 +28,8 @@ class Review extends React.Component {
     this.setStars();
     this.setColor();
     if (review.is_helpful) this.setState({ helpful: true });
-    if (review.review.length > 300);
-    this.setState({ reviewText: review.review.slice(0, 200) + "..." });
+    if (review.review.length > 300)
+      this.setState({ reviewText: review.review.slice(0, 150) + "..." });
   }
 
   setStars() {
@@ -85,7 +85,7 @@ class Review extends React.Component {
     }));
     reviewText.length < 300
       ? this.setState({ reviewText: review.review })
-      : this.setState({ reviewText: review.review.slice(0, 200) + "..." });
+      : this.setState({ reviewText: review.review.slice(0, 150) + "..." });
   }
 
   toggleReportModal() {
@@ -127,7 +127,7 @@ class Review extends React.Component {
     } = this.state;
     const helpHover = hoveronHelp ? "helpHovered" : "placeholder";
     let readMorePhrase = readMoreClicked ? "- Read less" : "+ Read more";
-    if (!readMoreClicked && review.review.length < 200) readMorePhrase = "";
+    if (!readMoreClicked && review.review.length < 150) readMorePhrase = "";
     const reviewPluralCase = review.reviewCount === 1 ? "review" : "reviews";
 
     return (
