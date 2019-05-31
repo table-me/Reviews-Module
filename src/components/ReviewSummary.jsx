@@ -125,7 +125,7 @@ const ReviewSummary = ({
                   scrollToTopOfFeed();
                 }}
               >
-                <span className="toolbarNumber">{5 - index}</span>
+                <div className="toolbarNumber">{5 - index}</div>
                 <div className="toolbar-light-background">
                   <div
                     className="toolbar-red"
