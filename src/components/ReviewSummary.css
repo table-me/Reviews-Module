@@ -5,8 +5,8 @@
 }
 .summaryStarRating {
   font-size: 0.875rem;
-  line-height: 1.43;
-  font-weight: 500;
+  line-height: 20.02px;
+  font-weight: 600;
   display: inline-block;
   margin: 5px 5px 5px 0;
   text-align: center;
@@ -70,7 +70,7 @@
 .summaryHeader {
   font-family: "BrandonText-Bold";
   font-size: 1.5rem;
-  line-height: 1.33;
+  line-height: 31.92px;
   color: #2d333f;
   border-bottom: 1px solid rgb(216, 217, 219);
   padding-bottom: 1rem;
@@ -80,7 +80,7 @@
 }
 .summarySubHeader {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 24px;
   font-weight: 900;
   display: flex;
 }
@@ -104,7 +104,7 @@
   position: relative;
   margin: 0 0 0 0.25rem;
   font-weight: 500;
-  line-height: 1.43;
+  line-height: 20.02px;
   font-size: 0.875rem;
   color: #6f737b;
 }
@@ -119,7 +119,7 @@
 }
 .summarySpacingContainer {
   font-family: "BrandonText-Light";
-  line-height: 1.43;
+  line-height: 20.02px;
   padding-top: 0.95rem;
   margin-top: -5px;
   font-weight: 700;
@@ -131,9 +131,10 @@
 }
 #BestRestaurantsLink {
   font-family: "BrandonText-Light";
-  font-weight: 900;
+  font-weight: 600;
   color: #da3743;
   text-decoration: none;
+  padding: 3px;
 }
 #BestRestaurantsLink:hover {
   text-decoration: underline;
