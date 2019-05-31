@@ -151,9 +151,9 @@ class Review extends React.Component {
             <span id="userCity">{review.city.slice(0, 11)}</span>
             <div id="userReviewsContainer">
               <span className="commentIcon" />
-              <span id="reviewCountText">
+              <div id="reviewCountText">
                 {review.reviewCount} {reviewPluralCase}
-              </span>
+              </div>
             </div>
           </div>
 
@@ -166,8 +166,8 @@ class Review extends React.Component {
                   ))}
                 </div>
                 <span className="reviewRatingDate">
-                  {" "}
-                  Dined on {moment(review.createdAt).format("MMMM Do, YYYY")}
+                  &#8226; &nbsp; Dined on{" "}
+                  {moment(review.createdAt).format("MMMM Do, YYYY")}
                 </span>
               </div>
               <div id="reviewRatingsContainer">

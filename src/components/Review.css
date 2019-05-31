@@ -19,6 +19,11 @@
   flex-direction: column;
   width: 100%;
 }
+#reviewRatingsContainer {
+  font-family: "BrandonText-Medium";
+  line-height: 17.02px;
+  font-size: 14px;
+}
 #reviewStarsDateRating {
   flex-direction: column;
   display: flex;
@@ -37,9 +42,10 @@
   font-weight: 500;
 }
 #reviewStarsContainer {
-  width: calc(18px * 5 + 0.25rem * 5);
   margin: 0 0.5rem 0 0;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
   padding-bottom: 2px;
 }
 .reviewStar {
@@ -51,8 +57,8 @@
   font-weight: 500;
 }
 .reviewRatingDate {
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
 }
 #reviewRatingsContainer {
   display: flex;
@@ -60,17 +66,20 @@
   margin-top: 0.5rem;
 }
 .reviewRatingCategory {
-  font-size: 0.875rem;
-  font-weight: bold;
-  line-height: 1.43;
+  font-weight: 500;
   text-transform: capitalize;
   margin: 0 0.5rem 0 0;
 }
 .reviewRatingNumber {
   color: #da3743;
-  font-size: 0.875rem;
-  font-weight: bold;
-  line-height: 1.43;
+  font-weight: 500;
+}
+#reviewText {
+  font-family: "BrandonText-Light";
+  line-height: 23px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.75px;
 }
 .twoHalvesContainer {
   display: flex;
@@ -109,7 +118,7 @@
   margin: 0 0.5rem 0 0;
   font-size: 12px;
   font-weight: bold;
-  line-height: 1.43;
+  line-height: 17.16px;
   flex: none;
   white-space: nowrap;
   color: #6f737b;
@@ -122,12 +131,16 @@
   margin-right: 4px;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3Euniversal / icon / details / small / ic_ticket copy%3C/title%3E%3Cpath d='M4.5 3.5A1.5 1.5 0 0 0 3 5v4.099a1.5 1.5 0 0 0 1.5 1.5h3.073L9.8 12.091a.5.5 0 0 0 .779-.409l.013-1.083h.908a1.5 1.5 0 0 0 1.5-1.5V5a1.5 1.5 0 0 0-1.5-1.5h-7z' stroke='%236F737B' fill='none'/%3E%3C/svg%3E");
 }
+#reviewCountText {
+  font-family: "BrandonText-Medium";
+  font-weight: 200;
+  font-size: 12px;
+}
 #reviewInitials {
   color: #ffffff;
   font-weight: 500;
   text-transform: capitalize;
 }
-
 .imgCircle {
   width: 45px;
   height: 45px;
@@ -154,10 +167,11 @@
 #readMore {
   color: #da3743;
   text-decoration: none;
-  font-size: inherit;
-  height: 24px;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  font-size: 16px;
+  font-family: "BrandonText-Light";
+  font-weight: 600;
 }
 #readMore:hover {
   text-decoration: underline;
