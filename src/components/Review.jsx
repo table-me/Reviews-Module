@@ -214,25 +214,6 @@ class Review extends React.Component {
                   id={helpHover}
                   value={review.is_helpful}
                   onClick={() => this.helpfulClick(review.is_helpful)}
-                  // onMouseOver={() =>
-                  //   this.setState({
-                  //     hoveronHelp: true,
-                  //     upvoteIcon:
-                  //       "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/redUpvote.png"
-                  //   })
-                  // }
-                  // onMouseLeave={() => {
-                  //   this.setState({ hoveronHelp: false });
-                  //   helpful
-                  //     ? this.setState({
-                  //         upvoteIcon:
-                  //           "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/redUpvote.png"
-                  //       })
-                  //     : this.setState({
-                  //         upvoteIcon:
-                  //           "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/whiteUpvote.png"
-                  //       });
-                  // }}
                 >
                   <div className="flex">
                     <img id="upvoteIcon" src={upvoteIcon} alt="upvote Icon" />
