@@ -34,27 +34,28 @@
   color: black;
 }
 .summaryCategory {
-  font-family: "BrandonText-Light";
+  font-family: "BrandonText-Regular";
   font-size: 0.875rem;
-  font-weight: 900;
   white-space: nowrap;
   color: black;
+}
+#boldText {
+  font-weight: 900;
 }
 #summaryFirstRating {
   border-left: none;
 }
 #summaryToolbarContainer {
-  /* display: inline-block; */
-  /* position: relative; */
   bottom: 62px;
 }
 #toolbar {
   margin-left: -35px;
+  margin-top: 30px;
 }
 #leftSummaryContainer {
   display: inline-block;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 #reviewConditional {
   font-family: "BrandonText-Light";

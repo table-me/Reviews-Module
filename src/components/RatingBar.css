@@ -1,30 +1,29 @@
 .toolbarNumber {
-    margin-right: 0.5rem;
-    width: 1rem;
-    text-align: center;
+  margin-right: 0.5rem;
+  width: 16px;
+  text-align: center;
 }
 .toolbarAndNumber {
-    cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
 }
 .toolbarAndNumber:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-.toolbarAndNumber:hover > .toolbar-light-background, .toolbar-hover-light-background:hover {
-    border-color: transparent; 
-    box-shadow: 0 0 0 2px #da3743; 
+.toolbar-light-background {
+  color: #000;
+  border: 1px solid #d8d9db;
+  display: inline-block;
+  width: 232px;
+  height: 13px;
 }
-.toolbar-light-background, .toolbar-hover-light-background:hover {
-    color: #000;
-    border: 1px solid #d8d9db;
-    display: inline-block;
-    width: 232px;
-    height: 13px;
-    margin-bottom: .75rem;
-    position: relative;
-    top: 14px;
+.toolbar-light-background:hover {
+  border: 2px solid #da3743;
 }
-.toolbar-red, .toolbar-hover-red:hover {
-    color: #fff;
-    background-color: #da3743;
-    height: 13px;
+.toolbar-red {
+  color: #fff;
+  background-color: #da3743;
+  height: 13px;
 }
