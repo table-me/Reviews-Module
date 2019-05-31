@@ -1,33 +1,37 @@
 @font-face {
-    font-family: 'BrandonText-Regular';
-    src:  url('/assets/fonts/BrandonText-Regular.otf') format('opentype')
+  font-family: "BrandonText-Regular";
+  src: url("/assets/fonts/BrandonText-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'BrandonText-Black';
-    src:  url('/assets/fonts/BrandonText-Black.otf') format('opentype')
+  font-family: "BrandonText-Black";
+  src: url("/assets/fonts/BrandonText-Black.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'BrandonText-Bold';
-    src:  url('/assets/fonts/BrandonText-Bold.otf') format('opentype')
+  font-family: "BrandonText-Bold";
+  src: url("/assets/fonts/BrandonText-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'BrandonText-Light';
-    src:  url('/assets/fonts/BrandonText-Light.otf') format('opentype')
+  font-family: "BrandonText-Light";
+  src: url("/assets/fonts/BrandonText-Light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'BrandonText-Thin';
-    src:  url('/assets/fonts/BrandonText-Thin.otf') format('opentype')
+  font-family: "BrandonText-Thin";
+  src: url("/assets/fonts/BrandonText-Thin.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'BrandonText-Medium';
-    src:  url('/assets/fonts/BrandonText-Medium.otf') format('opentype')
+  font-family: "BrandonText-Medium";
+  src: url("/assets/fonts/BrandonText-Medium.otf") format("opentype");
 }
 
 #appMasterContainer {
-    font-family: 'BrandonText-Regular';
+  font-family: "BrandonText-Regular", "Roboto", "Helvetica", "Arial",
+    "sans-serif";
+  margin: 20px;
+  width: 580px;
+  /* color: #2d333f; */
 }

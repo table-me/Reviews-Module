@@ -1,94 +1,139 @@
+#summaryContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: flex-start; */
+}
 .summaryStarRating {
-    display: inline-block;
-    margin: 5px 5px 5px 0; 
-    text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  font-weight: 500;
+  display: inline-block;
+  margin: 5px 5px 5px 0;
+  text-align: center;
+  color: #2d333f;
 }
 #summaryStarText {
-    position: relative;
-    bottom: 3px;
+  position: relative;
+  bottom: 3px;
 }
 .summaryStarIcon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
+}
+.summaryRatingContainer {
+  margin-top: 10px;
 }
 .summaryRating {
-    display: inline-block;
-    flex-direction: column;
-    list-style: none;
-    padding: 0 0.5rem;
-    position: relative;
-    text-align: center;
-    border-left: solid 1px #d8d9db;
+  display: inline-block;
+  flex-direction: column;
+  list-style: none;
+  padding: 0 0.5rem;
+  position: relative;
+  text-align: center;
+  border-left: solid 1px #d8d9db;
+  color: black;
+}
+.summaryCategory {
+  font-family: "BrandonText-Light";
+  font-size: 0.875rem;
+  font-weight: 900;
+  white-space: nowrap;
+  color: black;
 }
 #summaryFirstRating {
-    border-left: none;
+  border-left: none;
 }
 #summaryToolbarContainer {
-    display: inline-block;
-    margin-left: .5rem;
-    position: relative;
-    bottom: 62px;
+  /* display: inline-block; */
+  /* position: relative; */
+  bottom: 62px;
+}
+#toolbar {
+  margin-left: -35px;
 }
 #leftSummaryContainer {
-    display: inline-block;
-    margin: auto;
-    margin-bottom: 20px;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 20px;
 }
 #reviewConditional {
-    width: 363px;
-    padding-top: 0.5rem;
-    font-size: 1rem;
-    font-weight: normal;
+  font-family: "BrandonText-Light";
+  width: 363px;
+  padding-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 900;
 }
 .inlineBlock {
-    display: inline-block;
+  display: inline-block;
 }
 .summaryHeader {
-    font-family: 'BrandonText-Bold';
-    font-size: 1.5rem;
-    line-height: 1.33;
-    color: rgb(45, 51, 63);
-    border-bottom: 1px solid rgb(216, 217, 219);
-    padding-bottom: 1rem;
-    margin: 0 0 1rem;
-    display: flex;
-    justify-content: space-between;
+  font-family: "BrandonText-Bold";
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #2d333f;
+  border-bottom: 1px solid rgb(216, 217, 219);
+  padding-bottom: 1rem;
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 .summarySubHeader {
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 500;
-    display: flex;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 900;
+  display: flex;
 }
 #reviewSummaryContainer {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: solid 1px #d8d9db;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #d8d9db;
 }
 .summaryIcon {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-left: .25rem;
-    margin-right: .25rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
-#summaryBarIcon, #thumbsUpIcon {
-    position: relative;
-    top: 5px;
+#summaryBarIcon,
+#thumbsUpIcon {
+  position: relative;
+  top: 5px;
 }
-#summaryNoiseLevel {
-    position: relative;
-    top: 1px;
+#summaryNoiseText {
+  position: relative;
+  margin: 0 0 0 0.25rem;
+  font-weight: 500;
+  line-height: 1.43;
+  font-size: 0.875rem;
+  color: #6f737b;
 }
 #percentageRecommended {
-    font-weight: bold;
+  font-family: "BrandonText-Bold";
+  font-weight: 900;
+}
+#recommendedText {
+  margin-top: -5px;
+  font-size: 0.875rem;
+  color: #6f737b;
 }
 .summarySpacingContainer {
-    padding-top: 1rem;
+  font-family: "BrandonText-Light";
+  line-height: 1.43;
+  padding-top: 0.95rem;
+  margin-top: -5px;
+  font-weight: 700;
+}
+#recommendedText:hover,
+#summaryNoiseText:hover,
+#percentageRecommended:hover {
+  color: #da3743;
 }
 #BestRestaurantsLink {
-    color: #da3743;
-    text-decoration: none;
+  font-family: "BrandonText-Light";
+  font-weight: 900;
+  color: #da3743;
+  text-decoration: none;
 }
 #BestRestaurantsLink:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
