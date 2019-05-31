@@ -4,7 +4,7 @@ import styles from "./RatingBar.css";
 
 const RatingBar = ({ index, filter, scrollToTopOfFeed, percentages }) => {
   if (!percentages.length) {
-    return <div>Loading...</div>;
+    return <div id="loading">Loading...</div>;
   }
   return (
     <div
