@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import FilterBox from "./FilterBox.jsx";
 import styles from "./ReviewToolbar.css";
 import UnCheckedIcon from "./UnCheckedIcon.jsx";
+import CheckedIcon from "./CheckedIcon.jsx";
 
 class ReviewToolbar extends React.Component {
   constructor(props) {
@@ -48,21 +49,19 @@ class ReviewToolbar extends React.Component {
 
         <div id="dropdownHeader" onClick={e => this.handleSelection(e)}>
           <span>{current}</span>
-          <span>
-            <img className="star" src={arrow} />
-          </span>
+          <img className="star" src={arrow} />
         </div>
         <div className="dropdownContainer" style={{ display: display }}>
           <div
             className="dropdownItem"
-            value=" Newest"
+            value="Newest"
             onClick={e => {
               sortReviews(e.target.textContent.split(" ")[0]);
               this.handleSelection(e);
             }}
           >
-            <UnCheckedIcon />
-            <span className="dropdownText">Newest</span>
+            <CheckedIcon />
+            <span className="dropdownText">&nbsp;Newest</span>
           </div>
           <div
             className="dropdownItem"
@@ -73,7 +72,7 @@ class ReviewToolbar extends React.Component {
             }}
           >
             <UnCheckedIcon />
-            <span className="dropdownText">Highest Rating</span>
+            <span className="dropdownText">&nbsp;Highest Rating</span>
           </div>
           <div
             className="dropdownItem"
@@ -84,7 +83,7 @@ class ReviewToolbar extends React.Component {
             }}
           >
             <UnCheckedIcon />
-            <span className="dropdownText">Lowest Rating</span>
+            <span className="dropdownText">&nbsp;Lowest Rating</span>
           </div>
         </div>
 
