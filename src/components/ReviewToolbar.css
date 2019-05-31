@@ -26,6 +26,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 0.25rem;
+  padding-left: 8px;
   font-size: 0.875rem;
   border-radius: 2px;
   border: 1px solid #d8d9db;
@@ -40,6 +41,9 @@
   box-shadow: inset 0 0 0 1px #da3743;
   z-index: 5000;
 }
+.star {
+  top: 5px;
+}
 .dropdownItem {
   width: 275px;
   font-size: 0.875rem;
@@ -47,6 +51,8 @@
   cursor: pointer;
   box-sizing: border-box;
   padding: 0.65rem;
+  display: flex;
+  align-items: center;
 }
 .dropdownContainer {
   border-right: 1px solid #d8d9db;
@@ -77,4 +83,7 @@
 #filterWords {
   margin: 0.25rem 0.5rem 0rem 0rem;
   font-size: 0.875rem;
+}
+#uncheckedIcon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='none' /%3E%3C/svg%3E ");
 }
