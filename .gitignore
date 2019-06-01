@@ -1,8 +1,10 @@
-public/dist
+public/dist/bundle.js
+public/dist/bundle.js.br
+public/dist/bundle.js.gz
 node_modules
 Dockerfile
 .eslintrc.json
-enzyme.config.jsonj
-est.config.json
+enzyme.config.json
+jest.config.json
 __tests__
 .circleci
