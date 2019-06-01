@@ -1,2 +1,8 @@
 public/dist
 node_modules
+Dockerfile
+.eslintrc.json
+enzyme.config.jsonj
+est.config.json
+__tests__
+.circleci
