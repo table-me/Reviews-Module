@@ -8,3 +8,4 @@ enzyme.config.json
 jest.config.json
 __tests__
 .circleci
+coverage

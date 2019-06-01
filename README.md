@@ -1,6 +1,4 @@
-# Available Table: Review Module
-
-
+# Table.me: Review Module
 
 ## Table of Contents
 
@@ -29,4 +27,3 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
-
