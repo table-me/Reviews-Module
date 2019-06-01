@@ -12,8 +12,8 @@ class Review extends React.Component {
       hoveronHelp: false,
       helpful: false,
       upvoteIcon: this.props.review.is_helpful
-        ? "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/redUpvote.png"
-        : "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/whiteUpvote.png",
+        ? "https://s3-us-west-1.amazonaws.com/table.me/redUpvote.png"
+        : "https://s3-us-west-1.amazonaws.com/table.me/whiteUpvote.png",
       readMoreClicked: false,
       reviewText: this.props.review.review.slice(0, 150),
       stars: [],
@@ -67,11 +67,11 @@ class Review extends React.Component {
     helpful
       ? this.setState({
           upvoteIcon:
-            "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/whiteUpvote.png"
+            "https://s3-us-west-1.amazonaws.com/table.me/whiteUpvote.png"
         })
       : this.setState({
           upvoteIcon:
-            "https://s3-us-west-1.amazonaws.com/review-photos-fec-open-table/redUpvote.png"
+            "https://s3-us-west-1.amazonaws.com/table.me/redUpvote.png"
         });
     review.is_helpful ? (review.is_helpful = 0) : (review.is_helpful = 1);
   }
@@ -206,7 +206,10 @@ class Review extends React.Component {
                   id="reportContainer"
                   onClick={e => this.toggleReportModal(e)}
                 >
-                  <div id="flagIcon" />
+                  <img
+                    id="flagIcon"
+                    src="https://s3-us-west-1.amazonaws.com/table.me/flag.png"
+                  />
                   <span className="reportText">Report</span>
                 </div>
                 <div
