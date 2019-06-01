@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './ReportPopUp.css';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./ReportPopUp.css";
 
 class ReportPopUp extends React.Component {
   constructor(props) {
@@ -9,11 +9,11 @@ class ReportPopUp extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleMouseDown, false);
+    document.addEventListener("mousedown", this.handleMouseDown, false);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleMouseDown, false)
+    document.removeEventListener("mousedown", this.handleMouseDown, false);
   }
 
   handleMouseDown(e) {
@@ -29,16 +29,39 @@ class ReportPopUp extends React.Component {
           <div className="modalContent" ref={node => setNode(node)}>
             <div id="reviewReport">
               <div id="reportHeadContainer">
-                <div id="reportHeadText"><strong>Report this review as inappropriate?</strong></div>
+                <div id="reportHeadText">
+                  <strong>Report this review as inappropriate?</strong>
+                </div>
               </div>
               <div id="reportBodyContainer">
-                <div id="reportBodyText"><strong>If you believe this review should be removed from OpenTable, please let us know and someone will investigate.</strong></div>
-                <form>
+                <div id="reportBodyText">
+                  <strong>
+                    If you believe this review should be removed from OpenTable,
+                    please let us know and someone will investigate.
+                  </strong>
+                </div>
+                <form id="reportForm">
                   <input type="hidden" />
-                  <textarea id="reviewReasonText" placeholder="Tell us why you find the review inappropriate." required="required" />
+                  <textarea
+                    id="reviewReasonText"
+                    placeholder="Tell us why you find the review inappropriate."
+                    required="required"
+                  />
                   <div id="reportButtonsContainer">
-                    <button id="reportConfirm" type="submit" onClick={e => toggleReportModal(e)}>Report</button>
-                    <button id="reportCancel" type="button" onClick={e => toggleReportModal(e)}>Cancel</button>
+                    <button
+                      id="reportConfirm"
+                      type="submit"
+                      onClick={e => toggleReportModal(e)}
+                    >
+                      Report
+                    </button>
+                    <button
+                      id="reportCancel"
+                      type="button"
+                      onClick={e => toggleReportModal(e)}
+                    >
+                      Cancel
+                    </button>
                   </div>
                 </form>
               </div>
@@ -46,7 +69,7 @@ class ReportPopUp extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 export default ReportPopUp;
@@ -54,5 +77,5 @@ export default ReportPopUp;
 ReportPopUp.propTypes = {
   setNode: PropTypes.func.isRequired,
   toggleReportModal: PropTypes.func.isRequired,
-  outsideClick: PropTypes.func.isRequired,
+  outsideClick: PropTypes.func.isRequired
 };
