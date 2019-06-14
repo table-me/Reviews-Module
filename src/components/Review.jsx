@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import axios from "axios";
 import ReportPopUp from "./ReportPopUp.jsx";
 import moment from "moment";
 import styles from "./Review.css";
