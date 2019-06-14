@@ -8,7 +8,7 @@ const UnCheckedIcon = () => (
       cy="50"
       r="40"
       stroke="black"
-      stroke-width="8"
+      strokeWidth="8"
       fill="white"
     />
   </svg>
