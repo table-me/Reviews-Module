@@ -15,6 +15,7 @@ class Review extends React.Component {
         ? "https://s3-us-west-1.amazonaws.com/table.me/redUpvote.png"
         : "https://s3-us-west-1.amazonaws.com/table.me/whiteUpvote.png",
       readMoreClicked: false,
+      fullReview: this.props.review.review,
       reviewText: this.props.review.review.slice(0, 150),
       stars: [],
       reportClicked: false,
@@ -25,11 +26,12 @@ class Review extends React.Component {
 
   componentDidMount() {
     const { review } = this.props;
+    const { fullReview } = this.state;
     this.setStars();
     this.setColor();
     if (review.is_helpful) this.setState({ helpful: true });
-    if (review.review.length > 300)
-      this.setState({ reviewText: review.review.slice(0, 150) + "..." });
+    if (fullReview.length > 300)
+      this.setState({ reviewText: fullReview.slice(0, 150) + "..." });
   }
 
   setStars() {
@@ -77,15 +79,18 @@ class Review extends React.Component {
   }
 
   readMoreToggle(e) {
-    const { review } = this.props;
-    const { reviewText } = this.state;
     e.preventDefault();
     this.setState(prevState => ({
       readMoreClicked: !prevState.readMoreClicked
     }));
-    reviewText.length < 300
-      ? this.setState({ reviewText: review.review })
-      : this.setState({ reviewText: review.review.slice(0, 150) + "..." });
+    this.displayReview();
+  }
+
+  displayReview() {
+    const { fullReview, readMoreClicked } = this.state;
+    readMoreClicked
+      ? this.setState({ reviewText: fullReview.slice(0, 150) + "..." })
+      : this.setState({ reviewText: fullReview });
   }
 
   toggleReportModal() {
