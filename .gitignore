@@ -9,3 +9,4 @@ jest.config.json
 __tests__
 .circleci
 coverage
+.DS_Store
