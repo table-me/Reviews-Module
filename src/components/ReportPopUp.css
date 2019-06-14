@@ -111,5 +111,5 @@ textarea {
   border-radius: 2px;
   height: 320px;
   width: 380px;
-  box-shadow: 1px 2px 3px #d8d9db;
+  box-shadow: 0 0 4px #d8d9db, 0 2px 12px rgba(48, 51, 51, 0.09);
 }
