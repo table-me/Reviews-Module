@@ -13,17 +13,17 @@ class Review {
       (this.noise = Math.floor(Math.random() * 3 + 1)),
       (this.createdAt = faker.date.past()),
       (this.recommended = Math.floor(Math.random() * 60 + 40)),
-      (this.foodRating = Math.floor(Math.random() * 4 + 1)),
-      (this.ambianceRating = Math.floor(Math.random() * 4 + 1)),
-      (this.serviceRating = Math.floor(Math.random() * 4 + 1)),
-      (this.valueRating = Math.floor(Math.random() * 4 + 1)),
-      (this.overallRating = Math.floor(Math.random() * 4 + 1)),
+      (this.foodRating = Math.floor(Math.random() * 5 + 1)),
+      (this.ambianceRating = Math.floor(Math.random() * 5 + 1)),
+      (this.serviceRating = Math.floor(Math.random() * 5 + 1)),
+      (this.valueRating = Math.floor(Math.random() * 5 + 1)),
+      (this.overallRating = Math.floor(Math.random() * 5 + 1)),
       (this.reviewCount = Math.floor(Math.random() * 50));
   }
 }
 
 const makeReview = () => {
-  const numberOfReviews = Math.floor(Math.random() * 1000 + 1);
+  const numberOfReviews = Math.floor(Math.random() * 1000 + 500);
   const results = [];
   for (let i = 0; i < numberOfReviews; i++) {
     const review = new Review();
@@ -44,8 +44,9 @@ const filterWords = () => {
 const mockData = [];
 
 const createMockData = () => {
-  for (let i = 0; i < 101; i++) {
+  for (let i = 1; i < 10; i++) {
     const restaurant = {
+      id: i,
       name: faker.company.companyName(),
       reviews: makeReview(),
       filters: filterWords()
