@@ -11,19 +11,16 @@ app.use("/", express.static(__dirname + "/public/dist"));
 app.use("/restaurants/:id", express.static(__dirname + "/public/dist"));
 
 app.get("/api/restaurants/:id/reviews", (req, res) => {
-  Restaurant.aggregate(
-    [
-      { $match: { id: JSON.parse(req.params.id) } },
-      { $unwind: "$reviews" },
-      { $sort: { "reviews.createdAt": -1 } }
-    ],
-    (err, result) => {
+  Restaurant.aggregate()
+    .match({ id: JSON.parse(req.params.id) })
+    .unwind("reviews")
+    .sort({ "reviews.createdAt": -1 })
+    .exec((err, result) => {
       if (err) res.status(400).send("error getting reviews");
-      const reviews = [];
-      result.map(review => reviews.push(review.reviews));
-      res.json(reviews);
-    }
-  );
+      const allReviews = [];
+      result.map(restaurant => allReviews.push(restaurant.reviews));
+      res.json(allReviews);
+    });
 });
 
 app.get("/api/restaurants/:id/filters", (req, res) => {
