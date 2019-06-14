@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RatingBar from "./RatingBar.jsx";
-import styles from "./ReviewSummary.css";
+import RatingStyles from "./RatingBar.css";
+import SummaryStyles from "./ReviewSummary.css";
 
 const ReviewSummary = ({
   ratings,
