@@ -121,7 +121,7 @@ class App extends React.Component {
     let oneStarCount = 0;
 
     for (let i = 0; i < allRatings.length; i++) {
-      const rating = Math.floor(allRatings[i]);
+      const rating = allRatings[i];
       if (rating === 1) oneStarCount++;
       if (rating === 2) twoStarCount++;
       if (rating === 3) threeStarCount++;
@@ -135,10 +135,12 @@ class App extends React.Component {
       twoStarCount,
       oneStarCount
     ];
+    const percent = [];
+    counts.map(count => {
+      percent.push(Math.round((count / allRatings.length) * 100) + "%");
+    });
     this.setState({
-      percentages: counts.map(
-        count => Math.round((count / allRatings.length) * 100) + "%"
-      )
+      percentages: percent
     });
   }
 
