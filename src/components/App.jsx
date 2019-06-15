@@ -204,21 +204,32 @@ class App extends React.Component {
 
   sortReviewsBySelect(sortMethod) {
     let { currentRestReviews, allReviews } = this.state;
+    currentRestReviews = allReviews.slice(0);
     if (sortMethod === "Highest") {
-      currentRestReviews = allReviews.sort(
-        (a, b) => b.overallRating - a.overallRating
-      );
+      currentRestReviews.sort((a, b) => b.overallRating - a.overallRating);
+      this.setState({
+        reviews: currentRestReviews.slice(0, 20),
+        currentRestReviews: currentRestReviews
+      });
     } else if (sortMethod === "Lowest") {
-      currentRestReviews = allReviews.sort(
-        (a, b) => a.overallRating - b.overallRating
-      );
+      currentRestReviews.sort((a, b) => a.overallRating - b.overallRating);
+      this.setState({
+        reviews: currentRestReviews.slice(0, 20),
+        currentRestReviews: currentRestReviews
+      });
     } else {
-      currentRestReviews = allReviews.sort((a, b) => b.dinedDate - a.dinedDate);
+      this.setState({
+        reviews: currentRestReviews.slice(0, 20),
+        currentRestReviews: currentRestReviews
+      });
     }
-    this.setState({
-      reviews: currentRestReviews.slice(0, 20),
-      currentRestReviews: currentRestReviews
-    });
+
+    if (sortMethod === "Newest") {
+      this.setState({
+        reviews: allReviews.slice(0, 20),
+        currentRestReviews: allReviews
+      });
+    }
   }
 
   handlePageChange(page) {
@@ -274,7 +285,6 @@ class App extends React.Component {
         <ReviewList reviews={reviews} />
 
         <Pagination
-          reviews={allReviews}
           handlePageChange={this.handlePageChange.bind(this)}
           currentPage={currentPage}
           totalPages={totalPages}
