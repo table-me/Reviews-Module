@@ -60,8 +60,8 @@ class ReviewToolbar extends React.Component {
               this.handleSelection(e);
             }}
           >
-            <CheckedIcon />
-            <span className="dropdownText">&nbsp;Newest</span>
+            <UnCheckedIcon />
+            <span className="dropdownText">Newest</span>
           </div>
           <div
             className="dropdownItem"
@@ -72,7 +72,7 @@ class ReviewToolbar extends React.Component {
             }}
           >
             <UnCheckedIcon />
-            <span className="dropdownText">&nbsp;Highest Rating</span>
+            <span className="dropdownText">Highest Rating</span>
           </div>
           <div
             className="dropdownItem"
@@ -83,7 +83,7 @@ class ReviewToolbar extends React.Component {
             }}
           >
             <UnCheckedIcon />
-            <span className="dropdownText">&nbsp;Lowest Rating</span>
+            <span className="dropdownText">Lowest Rating</span>
           </div>
         </div>
 
