@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
-const db = mongoose.connect('mongodb://localhost/reviews', {useNewUrlParser: true});
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://3.14.151.226/reviews", { useNewUrlParser: true });
+const db = mongoose.connection;
 
 module.exports = db;
