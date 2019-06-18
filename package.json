@@ -8,8 +8,8 @@
   "author": "Jia Feng",
   "license": "",
   "scripts": {
-    "start": "nodemon server.js",
-    "build": "webpack -d --watch",
+    "start": "node server.js",
+    "build": "webpack -p --watch",
     "seed": "node ./database/seed.js",
     "test": "jest",
     "test:watch": "jest --watch",
