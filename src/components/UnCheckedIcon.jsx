@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "./UnCheckedIcon.css";
 
 const UnCheckedIcon = () => (
-  <svg height="24px" width="24px" viewBox="0 0 100 100">
+  <svg height="23px" width="23px" viewBox="0 0 100 100">
     <circle
       cx="50"
       cy="50"
