@@ -51,6 +51,7 @@
   cursor: pointer;
   box-sizing: border-box;
   padding: 0.65rem;
+  padding-left: 5px;
   display: flex;
   align-items: center;
 }
