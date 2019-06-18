@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-// const AutoIncrement = require("mongoose-sequence")(mongoose);
 const db = require("./index.js");
 mongoose.Promise = global.Promise;
 
@@ -26,7 +25,6 @@ const restaurantSchema = new mongoose.Schema({
     }
   ]
 });
-// restaurantSchema.plugin(AutoIncrement, { inc_field: "id" });
 
 const Restaurant = mongoose.model("Restaurant", restaurantSchema);
 
