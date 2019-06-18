@@ -4,7 +4,10 @@ const mockData = require("./dataGenerator.js");
 
 const insertData = () => {
   Restaurant.create(mockData)
-    .then(() => console.log("successfully seeded data!"))
+    .then(() => {
+      db.close();
+      console.log("successfully seeded data!");
+    })
     .catch(err => {
       if (err) console.log(err);
     });
