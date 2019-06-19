@@ -1,29 +1,38 @@
-# Table.me: Review Module
+# Table.me: Reviews
 
-## Table of Contents
+This is the reviews module for a restaurant booking service. It is built using MongoDB, Express/Node, React.
+[Click here](http://bit.ly/table-me-reviews) to interact with a deployed version of this app.
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+## Demo
 
-## Usage
+1. [Overall](#overall)
+1. [Summary](#summary)
+1. [Sorting](#sorting)
+1. [Review](#review)
+1. [Pagination](#pagination)
+1. [Installation](#installation)
 
-> Some usage instructions
+## Overall
 
-## Requirements
+<img src="https://i.imgur.com/WR5KfnW.gifv" width="40" height="40" />
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+## Summary
 
-- Node 6.13.0
-- etc
+## Sorting
 
-## Development
+## Pagination
 
-### Installing Dependencies
+## Installation
 
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
+npm run build
+npm run seed
+npm start
 ```
+
+## Related Services
+
+## About
