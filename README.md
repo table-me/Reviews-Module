@@ -14,11 +14,13 @@ This is the reviews module for a restaurant booking service. It is built using M
 
 ## Overall
 
-<img src="https://i.imgur.com/WR5KfnW.gif" width="70%" />
+<img src="https://i.imgur.com/0gSEaKI.gif" width="70%" />
 
 ## Summary
 
 ## Sorting
+
+## Review
 
 ## Pagination
 
