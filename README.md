@@ -14,8 +14,8 @@ This is the reviews module for a restaurant booking service. It is built using M
 
 ## Overview
 
-<img src="https://i.imgur.com/MBi6nWn.mp4" width="70%" />
-<!-- [Imgur](https://i.imgur.com/MBi6nWn.mp4) -->
+<img src="https://i.imgur.com/eqMMIlA.gif" width="70%" />
+<!-- [Imgur](https://i.imgur.com/eqMMIlA.gif) -->
 ## Summary
 
 ## Sorting
