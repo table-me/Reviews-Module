@@ -1,8 +1,10 @@
 # Table.me: Reviews
 
-This is the front-end reviews module for a restaurant booking service. It is built using MongoDB, Express/Node, React.
-[Click here to interact with a deployed version of this app](http://bit.ly/table-me-reviews). Table.me: Reviews is a component that displays all reviews submitted by verified users. It is a highly filterable module that displays all information in a easy and user friendly manner.
+Table.me: Reviews is a component that displays all reviews submitted by verified users. It is a highly filterable module that displays all information in a easy and user friendly manner. This is the front-end reviews module for a restaurant booking service. It is built using MongoDB, Express/Node, React.
 
+[Click here to interact with a deployed version of this app](http://bit.ly/table-me-reviews).
+
+<br>
 <img src="https://i.imgur.com/IMe8jVM.gif" />
 
 ## Demo
