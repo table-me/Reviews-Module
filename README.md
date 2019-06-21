@@ -7,11 +7,6 @@ This is the front-end reviews module for a restaurant booking service. It is bui
 
 ## Demo
 
-1. [Restaurant Summary](#summary)
-1. [Sorting Reviews](#sorting)
-1. [User Review](#review)
-1. [Pagination](#pagination)
-
 ### Restaurant summary displays all information a visitor will need to know about the restaurant:
 
 The restaurant summary section aggregates all user reviews to display it in a variety of ways. The star and number rating system are calculated by the average user rating. The bar graph showcases the percentage of each star rating. It is also clickable so that the user may filter the reviews according to the rating.
@@ -34,7 +29,7 @@ Individual reviews display information about the user in addition to their ratin
 
 Page numbers are dynamically changed depending on sorting/filters. Pages are able to be parsed through by page and arrow clicks. Page automatically scrolls to the top of the reviews list for user convenience.
 
-<img src="https://i.imgur.com/PHNjTZ9.gif" />
+<img src="https://i.imgur.com/OGRp7sF.gif" />
 
 ## Installation
 
