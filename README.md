@@ -5,17 +5,17 @@ This is the reviews module for a restaurant booking service. It is built using M
 
 ## Demo
 
-1. [Overall](#overall)
+1. [Overview](#overview)
 1. [Summary](#summary)
 1. [Sorting](#sorting)
 1. [Review](#review)
 1. [Pagination](#pagination)
 1. [Installation](#installation)
 
-## Overall
+## Overview
 
-<img src="https://i.imgur.com/WR5KfnW.gif" width="70%" />
-
+<img src="https://i.imgur.com/MBi6nWn.mp4" width="70%" />
+<!-- [Imgur](https://i.imgur.com/MBi6nWn.mp4) -->
 ## Summary
 
 ## Sorting
